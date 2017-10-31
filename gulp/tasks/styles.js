@@ -7,6 +7,7 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
+const sassGlob = require('gulp-sass-glob');
 
 const { STYLES_MAIN_FILE, STYLES_DEST } = config;
 const plugins = [
@@ -17,6 +18,7 @@ const plugins = [
 
 gulp.task('sass', ['stylelint'], () => {
     return gulp.src(STYLES_MAIN_FILE)
+        .pipe(sassGlob())
         .pipe(sourcemaps.init())
         .pipe(sass()).on('error', sass.logError)
         .pipe(postcss(plugins))
