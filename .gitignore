@@ -1,11 +1,11 @@
 .DS_Store
 .idea
+dist/
 src/assets/
 *.ai
 *.log
 *.pdf
 *.psd
 *.sublime*
-*.dist
 node_modules/
 Thumbs.db

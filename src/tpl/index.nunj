@@ -1,0 +1,56 @@
+{% extends 'layouts/default.html' %}
+
+{% set title = 'pages' %}
+
+{% block head %}
+    <style>
+        body {
+            background-color: #162A4F;
+        }
+
+        .templates {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .templates__title {
+            color: #FFD11A;
+        }
+
+        .templates__list {
+            color: #FFFFFF;
+        }
+
+        .templates__link {
+            color: #FFFFFF;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+
+        .templates__link:hover {
+            text-decoration: underline;
+        }
+
+        .templates__item {
+            margin-top: .5rem;
+        }
+    </style>
+{% endblock %}
+
+{% set pagesList = [
+        ['001', 'page-home.html', 'Home'],
+        ['002', 'page-products.html', 'Products']
+    ]
+%}
+
+{% block content %}
+    <div class="container templates">
+        <h1 class="templates__title">Gllasy: Templates</h1>
+        <ul class="templates__list">
+            {% for id, url, title in pagesList %}
+                <li class="templates__item">
+                    <a class="templates__link" href="{{url}}">id-{{id}}: {{title}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

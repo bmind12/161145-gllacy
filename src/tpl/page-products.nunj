@@ -1,0 +1,9 @@
+{% extends 'layouts/default.html' %}
+
+{% set title = 'Products' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Gllasy: Products</h1>
+    </div>
+{% endblock %}
