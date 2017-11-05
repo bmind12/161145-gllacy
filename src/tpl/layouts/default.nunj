@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    {# META #}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ title }}</title>
 
+    {# STYLES #}
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
+    {# FONTS #}
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-
-    {% block head %}{% endblock %}
 </head>
 <body>
+    {% include '../components/header/header.nunj'%}
+
     <div class="page-wrapper">
         {% block content %}{% endblock %}
     </div>
