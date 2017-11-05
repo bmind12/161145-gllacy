@@ -42,7 +42,7 @@
 
 {% block content %}
     <div class="container templates">
-        <h1 class="templates__title">Gllasy: Templates</h1>
+        <h1 class="templates__title">Gllacy: Templates</h1>
         <ul class="templates__list">
             {% for id, url, title in pagesList %}
                 <li class="templates__item">
