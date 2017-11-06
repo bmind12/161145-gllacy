@@ -4,7 +4,7 @@ const runSequence = require('run-sequence');
 
 const sequence = [
     'clean',
-    'sass',
+    ['sass', 'gfx'],
     'tpl-compile'
 ];
 
