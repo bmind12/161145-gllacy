@@ -1,6 +1,6 @@
 {% from '../../helpers/svg.nunj' import svg%}
 
-<a href='/' class="header-logo">
+<a href='/' class="header__logo">
     <img src="gfx/icons/png/logo.png" alt="Gllacy logo" width="154" height="64">
     {# {{ svg(sprite='logo', name='logo-gllacy', className='header-logo__icon') }} #}
 </a>
