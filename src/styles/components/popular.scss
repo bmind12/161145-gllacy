@@ -1,0 +1,10 @@
+.popular {
+    &__item {
+
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

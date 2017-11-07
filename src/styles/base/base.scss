@@ -13,19 +13,23 @@ body {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
+// img {
+//     width: 100%;
+//     height: auto;
+// }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
     min-width: 900px;
+    // margin: 0 auto;
     padding: 0 25px;
     font-family: 'Roboto', sans-serif;
     color: $primary-font;
+}
+
+.visually-hidden {
+    display: none;
 }
