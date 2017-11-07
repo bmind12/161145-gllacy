@@ -1,0 +1,7 @@
+<ul class="header__user">
+    {% for name, link in user %}
+        <li class="header__user-item">
+            <a href="{{link}}">{{name}}</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,6 @@
+<nav>
+    {% include './header-logo.nunj' %}
+    {% include './header-menu.nunj' %}
+    <div class="header__search"><a href="#0">Поиск</a></div>
+    {% include './header-user.nunj' %}
+</nav>

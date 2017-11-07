@@ -1,0 +1,7 @@
+<ul class="header__nav">
+    {% for name, link in navigation %}
+        <li class="header__nav-item">
+            <a href="{{link}}">{{name}}</a>
+        </li>
+    {% endfor %}
+</ul>

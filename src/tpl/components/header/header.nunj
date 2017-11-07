@@ -1,15 +1,15 @@
-{%
-    set header = {
-        navigation: {
-            items: [
-                'Каталог',
-                'Доставка и оплата',
-                'О Компании'
-            ]
-        }
-    }
-%}
+{% set navigation = [
+    ['Каталог', '#0'],
+    ['Доставка и оплата', '#0'],
+    ['О Компании', '#0']
+] %}
 
-{% include './header-logo.nunj'%}
+{% set user = [
+    ['Вход', '#0'],
+    ['Пусто', '#0']
+] %}
 
-<div>Hello, world!</div>
+<header>
+    {% include './header-navigation.nunj' %}
+    {% include './header-connection.nunj' %}
+</header>
