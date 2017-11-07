@@ -1,0 +1,5 @@
+<footer>
+    {% include './footer-social.nunj' %}
+    {% include './footer-menu.nunj' %}
+    {% include './footer-partner.nunj' %}
+</footer>

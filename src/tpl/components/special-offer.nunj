@@ -1,0 +1,17 @@
+{% set offer = [
+    ['Малинка даром!', 'offer__item--raspberries', 'При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.', 'Хочу варенье!', '#0'],
+    ['Шоколадки даром!', 'offer__item--chocolate', 'При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.', 'Хочу шоколадки!', '#0']
+] %}
+
+<section class="offer">
+    <h2 class="visually-hidden">Специальные предложения</h2>
+    <ul>
+        {% for name, modifier, text, button, link in offer %}
+            <li class="offer__item {{modifier}}">
+                <h3>{{name}}</h3>
+                <p>{{text}}</p>
+                <a href="{{link}}">{{button}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

@@ -1,0 +1,14 @@
+<section class="products">
+    <h2 class="visually-hidden">Мороженое</h2>
+    <ul>
+        {% for name, price, volume, modifier, link, img in products %}
+            <li class="offer__item {{modifier}}">
+                <a href="{{link}}">
+                    <img src="{{img}}" alt="{{name}}">
+                </a>
+                <span>{{price}}<small>/{{volume}}</small></span>
+                <h3>{{name}}</h3>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
