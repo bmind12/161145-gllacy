@@ -1,9 +1,16 @@
-{% extends 'layouts/default.nunj' %}
+{% extends './layouts/default.nunj' %}
 
 {% set title = 'Home' %}
 
 {% block content %}
-    <div class="container">
-        <h1>Gllacy: Home</h1>
+    <h1 class="visually-hidden">Gllacy: магазин мороженого</h1>
+    {% include './components/popular.nunj' %}
+    {% include './components/special-offer.nunj' %}
+    {% include './components/hits.nunj' %}
+    {% include './components/features.nunj' %}
+    <div>
+        {% include './components/article.nunj' %}
+        {% include './components/subscription.nunj' %}
     </div>
+    {% include './components/contacts.nunj' %}
 {% endblock %}
