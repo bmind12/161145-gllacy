@@ -8,7 +8,6 @@
     <title>{{ title }}</title>
 
     {# STYLES #}
-    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
     {# FONTS #}
@@ -17,8 +16,8 @@
 <body>
     {% include '../components/header/header.nunj'%}
 
-    <div class="page-wrapper">
+    <main>
         {% block content %}{% endblock %}
-    </div>
+    </main>
 </body>
 </html>
