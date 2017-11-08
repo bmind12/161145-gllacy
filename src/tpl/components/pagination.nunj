@@ -1,0 +1,20 @@
+{% set pages = [
+    ['1', '#0'],
+    ['2', '#0'],
+    ['3', '#0'],
+    ['4', '#0'],
+    ['5', '#0'],
+    ['arrow-right', '#0']
+] %}
+
+<ul>
+    {% for page, link in pages %}
+        {% if page === 'arrow-left' %}
+            <li class="arrow-left"></li>
+        {% elif page === 'arrow-right' %}
+            <li class="arrow-right"></li>
+        {% else %}
+            <li><a href="{{link}}">{{page}}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
