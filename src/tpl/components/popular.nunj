@@ -1,7 +1,7 @@
 {% set popular = [
-    ['Крем-брюле и пломбир с малиновым джемом', 'http://satyr.io/650x600/', 'Давайте оба!', '#0', 'active'],
-    ['Крем-брюле и пломбир с малиновым джемом', 'http://satyr.io/650x600/', 'Давайте оба!', '#0'],
-    ['Крем-брюле и пломбир с малиновым джемом', 'http://satyr.io/650x600/', 'Давайте оба!', '#0']
+    ['Крем-брюле и пломбир с малиновым джемом', './gfx/images/bestseller-1.png', 'Давайте оба!', '#0', 'active'],
+    ['Крем-брюле и пломбир с малиновым джемом', './gfx/images/bestseller-2.png', 'Давайте оба!', '#0'],
+    ['Крем-брюле и пломбир с малиновым джемом', './gfx/images/bestseller-3.png', 'Давайте оба!', '#0']
 ] %}
 
 <section class="popular">
@@ -9,8 +9,8 @@
     <ul>
         {% for name, img, button, link, modifier in popular %}
             <li class="popular__item {{modifier}}">
-                <h3>{{name}}</h3>
                 <img src="{{img}}" alt="{{name}}">
+                <h3>{{name}}</h3>
                 <a href="{{link}}">{{button}}</a>
             </li>
         {% endfor %}

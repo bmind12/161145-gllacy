@@ -9,7 +9,7 @@
     ['Пусто', '#0']
 ] %}
 
-<header>
+<header class="container">
     {% include './header-navigation.nunj' %}
     {% include './header-connection.nunj' %}
 </header>

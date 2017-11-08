@@ -1,9 +1,25 @@
 <section>
     <h2 class="visually-hidden">Мы в социальных сетях</h2>
     <ul>
-        <li><a href="#0">Twitter</a></li>
-        <li><a href="#0">Insta</a></li>
-        <li><a href="#0">Facebook</a></li>
-        <li><a href="#0">VK</a></li>
+        <li>
+            <a href="https://twitter.com/" aria-label="Twitter">
+                <img src="./gfx/icons/svg/twitter.svg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+                <img src="./gfx/icons/svg/instagram.svg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+                <img src="./gfx/icons/svg/fb.svg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://vk.com/feed" aria-label="VK">
+                <img src="./gfx/icons/svg/vk.svg" alt="">
+            </a>
+        </li>
     </ul>
 </section>

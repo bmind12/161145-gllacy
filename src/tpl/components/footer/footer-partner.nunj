@@ -1,5 +1,5 @@
 <div>
     <a href="https://htmlacademy.ru/" target="_blank">
-        <img src="http://satyr.io/108x39/" alt="html academy">
+        <img src="./gfx/icons/svg/logo-htmlacademy.svg" alt="html academy" width="108" height="39">
     </a>
 </div>

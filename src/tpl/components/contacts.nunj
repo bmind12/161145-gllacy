@@ -1,6 +1,6 @@
 <section>
     <h2>Контакты</h2>
-    <img src="http://satyr.io/1200x640/" alt="Карта">
+    <img src="./gfx/images/map.jpg" alt="Карта" width="1200" height="640">
     <div>
         <span>Адрес главного офиса и офлайн магазина:</span><br>
         <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span><br>
