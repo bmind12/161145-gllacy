@@ -1,6 +1,14 @@
-<ul>
-    <li><a href="#0">Для поставщиков</a></li>
-    <li><a href="#0">О производстве</a></li>
-    <li><a href="#0">Наши документы</a></li>
-    <li><a href="#0">Экологические стандарты</a></li>
+<ul class="footer__nav-list">
+    <li class="footer__nav-item footer__nav-item--heart">
+        <a class="footer__nav-link" href="#0">Для поставщиков</a>
+    </li>
+    <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#0">О производстве</a>
+    </li>
+    <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#0">Наши документы</a>
+    </li>
+    <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#0">Экологические стандарты</a>
+    </li>
 </ul>

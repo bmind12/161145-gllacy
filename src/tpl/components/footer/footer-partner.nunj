@@ -1,5 +1,6 @@
-<div>
-    <a href="https://htmlacademy.ru/" target="_blank">
+<div class="footer__partner-block">
+    <a class="footer__partner-link" href="https://htmlacademy.ru/" target="_blank">
         <img src="./gfx/icons/svg/logo-htmlacademy.svg" alt="html academy" width="108" height="39">
     </a>
+    <p class="footer__partner-text">Сделано в HTML Academy © 2017</p>
 </div>

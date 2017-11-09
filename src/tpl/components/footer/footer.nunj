@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer container">
     {% include './footer-social.nunj' %}
     {% include './footer-menu.nunj' %}
     {% include './footer-partner.nunj' %}
