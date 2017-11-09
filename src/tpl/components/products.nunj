@@ -1,13 +1,13 @@
 <section class="products">
     <h2 class="visually-hidden">Мороженое</h2>
-    <ul>
+    <ul class="products__list">
         {% for name, price, volume, link, img, modifier in products %}
-            <li class="offer__item {{modifier}}">
+            <li class="products__item {{modifier}}">
                 <a href="{{link}}">
-                    <img src="{{img}}" alt="{{name}}">
+                    <img class="products__img" src="{{img}}" alt="{{name}}">
                 </a>
-                <span>{{price}}<small>/{{volume}}</small></span>
-                <h3>{{name}}</h3>
+                <span class="products__price">{{price}}<small class="products__volume">/{{volume}}</small></span>
+                <h3 class="products__title">{{name}}</h3>
             </li>
         {% endfor %}
     </ul>
