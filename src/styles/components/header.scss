@@ -1,8 +1,26 @@
 .header {
+    padding-top: 5px;
+    position: relative;
+
+    &__navigation {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 
     &__logo {
         display: inline-block;
         width: 154px;
         height: 64px;
+        margin-right: 25px;
+    }
+
+    &__connection {
+        position: absolute;
+        transform: translateY(100%);
+        bottom: 0;
+        right: 25px;
+        margin: 0;
+        margin-left: auto;
     }
 }

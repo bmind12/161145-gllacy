@@ -1,7 +1,7 @@
-<ul class="header__user">
-    {% for name, link in user %}
-        <li class="header__user-item">
-            <a href="{{link}}">{{name}}</a>
+<ul class="user-panel">
+    {% for name, link, modifier in user %}
+        <li class="user-panel__item">
+            <a class="user-panel__link {{modifier}}" href="{{link}}">{{name}}</a>
         </li>
     {% endfor %}
 </ul>

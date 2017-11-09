@@ -5,11 +5,11 @@
 ] %}
 
 {% set user = [
-    ['Вход', '#0'],
-    ['Пусто', '#0']
+    ['Вход', '#0', 'user-panel__link--login'],
+    ['Пусто', '#0', 'user-panel__link--cart']
 ] %}
 
-<header class="container">
+<header class="header container">
     {% include './header-navigation.nunj' %}
     {% include './header-connection.nunj' %}
 </header>

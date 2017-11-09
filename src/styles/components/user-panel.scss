@@ -1,0 +1,40 @@
+.user-panel {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
+    list-style-type: none;
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        display: inline-block;
+        height: 35px;
+        padding: 10px 0 9px;
+        font-weight: 700;
+        line-height: 16px;
+        color: $primary-font;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, .2);
+        border-radius: 20px;
+
+        &--login {
+            padding-right: 18px;
+            padding-left: 46px;
+            margin-left: 10px;
+            background-image: url("../gfx/icons/svg/entrance.svg");
+            background-position: 18px 10px;
+            background-repeat: no-repeat;
+        }
+
+        &--cart {
+            padding-right: 35px;
+            padding-left: 47px;
+            margin-left: 5px;
+            background-image: url("../gfx/icons/svg/basket.svg");
+            background-position: 18px 10px;
+            background-repeat: no-repeat;
+        }
+    }
+}

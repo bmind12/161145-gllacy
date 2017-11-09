@@ -1,0 +1,12 @@
+.main-search {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-image: url("../gfx/icons/svg/loupe.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    content: "";
+}
