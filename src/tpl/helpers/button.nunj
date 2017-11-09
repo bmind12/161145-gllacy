@@ -1,0 +1,27 @@
+{# Example code
+{% import "helpers/button.nunj" as btn %}
+
+Button without icon
+{{btn.template(type='primary', class='', text='Continue')}}
+
+Button with icon
+{% call btn.template(type='primary', class='', text='Sign in with Facebook', left=false) %}
+    {{ svg('check-symbol', 'icon-symbol icon--baseline') }}
+{% endcall %}
+#}
+
+{% macro template(type, class, text, link, disabled, aria, left, data) %}
+    <{% if link %}a {% else %}button type="button"{% endif %}
+    class="btn {% if type %}btn-{{type}}{% endif %} {{class}}"
+    {% if link %}href="{{link}}"{% endif %}
+    {% if disabled %}disabled{% endif %}
+    {% if aria %}{% for attr in aria %}aria-{{attr|safe}}{% endfor %}{% endif %}
+    {% if data %}{% for attr in data %}data-{{attr.key}}="{{attr.value}}"{% endfor %}{% endif %}>
+        {% if caller %}
+            {% if left %}{{caller()}}{{text}}
+            {% else %}<span class="btn__text">{{text|safe}}</span>{{caller()}}{% endif %}
+        {% else%}
+            {{text}}
+        {% endif %}
+    </{% if link %}a{% else %}button{% endif %}>
+{% endmacro %}

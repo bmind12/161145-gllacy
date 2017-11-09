@@ -1,0 +1,60 @@
+.features {
+    padding: 25px;
+    color: $secondary-font;
+    background-image: url("../gfx/images/bg-features.jpg");
+    border-radius: 15px;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        width: 49%;
+        padding-left: 55px;
+        padding-top: 15px;
+        margin-bottom: 15px;
+        background-position: top left;
+        background-repeat: no-repeat;
+
+        &--icecream {
+            background-image: url("../gfx/icons/svg/ice-cream.svg");
+        }
+
+        &--eco {
+            background-image: url("../gfx/icons/svg/eco.svg");
+        }
+
+        &--cow {
+            background-image: url("../gfx/icons/svg/cow.svg");
+        }
+
+        &--thermometer {
+            background-image: url("../gfx/icons/svg/thermometer.svg");
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .features {
+        &__item {
+            width: 535px;
+        }
+    }
+}

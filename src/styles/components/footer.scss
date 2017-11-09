@@ -45,6 +45,13 @@
 
     &__partner-block {
         width: 250px;
+        text-align: right;
+    }
+
+    &__partner-link {
+        text-align: left;
+        display: inline-block;
+        width: 190px;
     }
 
     &__partner-text {
