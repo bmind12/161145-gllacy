@@ -1,3 +1,9 @@
 <div class="header__search" aria-label="search">
     <a class="main-search" href="#0"></a>
+    <form method="get" action="#0" class="main-search__form">
+        <div class="input">
+            <input class="input__field" type="text" placeholder="Что ищем?" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Что ищем?'">
+            <span class="input__placeholder">Что ищем?</span>
+        </div>
+    </form>
 </div>

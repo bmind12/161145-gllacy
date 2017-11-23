@@ -1,6 +1,6 @@
 .header {
-    padding-top: 5px;
     position: relative;
+    padding-top: 5px;
 
     &__navigation {
         display: flex;
@@ -17,10 +17,27 @@
 
     &__connection {
         position: absolute;
-        transform: translateY(100%);
-        bottom: 0;
         right: 25px;
+        bottom: 0;
+        z-index: 10;
         margin: 0;
         margin-left: auto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: right;
+        transform: translateY(100%);
+    }
+
+    &__search {
+        position: relative;
+    }
+
+    &__phone {
+        display: inline-block;
+        padding: 5px 0 0;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 24px;
     }
 }

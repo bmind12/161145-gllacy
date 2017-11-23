@@ -1,0 +1,5 @@
+<ul class="breadcrumbs">
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#0">Главная</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#0">Каталог</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link">Сливочное</a></li>
+</ul>

@@ -1,0 +1,199 @@
+.products-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 860px;
+    margin-bottom: 40px;
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 39px;
+        padding: 8px 16px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 30px;
+
+        &--white {
+
+            &:hover {
+                color: $secondary-font;
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__name {
+        width: 100%;
+        padding: 0 17px;
+        margin-bottom: 6px;
+    }
+
+    &__elem {
+        position: relative;
+        margin-top: 18px;
+    }
+
+    &__select {
+        margin-right: 40px;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        color: inherit;
+        background-color: transparent;
+        border: none;
+        appearance: none;
+    }
+
+    &__sort {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        border-color: #fff transparent transparent;
+        border-style: solid;
+        border-width: 11px 5px 0;
+        outline: none;
+        transform: translateY(-50%);
+
+        &:focus {
+            box-shadow: 0 0 0 1px #eee;
+        }
+
+        .products-filter__wrapper--white:hover & {
+            border-color: #000 transparent transparent;
+        }
+    }
+
+    &__submit {
+        height: 39px;
+        padding: 0 35px;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        color: $primary-font;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid #fff;
+        border-radius: 30px;
+        transition: all 0.075s ease-out;
+
+        &:hover {
+            color: $secondary-font;
+            background-color: #fff;
+        }
+
+        &:active {
+            color: $secondary-font;
+            background-color: #ededed;
+            box-shadow: inset 0 2px 1px #696969;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px #ccc;
+        }
+    }
+
+    & [type=radio] {
+        position: absolute;
+        opacity: 0;
+
+        & + label {
+            position: relative;
+            padding-left: 30px;
+            margin-right: 15px;
+            cursor: pointer;
+            opacity: 0.8;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                content: '';
+                transform: translateY(-50%);
+                box-shadow: 0 0 0 4px #fff;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &:checked + label:before {
+            background-color: #fff;
+            border: 4px solid #aabcb2;
+        }
+
+        &:disabled + label {
+            opacity: 0.4;
+        }
+
+        &:focus + label {
+            opacity: 1;
+        }
+    }
+
+    & [type=checkbox] {
+        position: absolute;
+        opacity: 0;
+
+        & + label {
+            position: relative;
+            padding-left: 35px;
+            margin-right: 13px;
+            cursor: pointer;
+            opacity: 0.8;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 27px;
+                height: 28px;
+                background-image: url('../gfx/icons/svg/checkbox-off.svg');
+                background-position: left center;
+                background-repeat: no-repeat;
+                content: '';
+                transform: translateY(-50%);
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &:checked + label:before {
+            background-image: url('../gfx/icons/svg/checkbox-on.svg');
+        }
+
+        &:disabled + label {
+            opacity: 0.4;
+        }
+
+        &:focus + label {
+            opacity: 1;
+        }
+    }
+}

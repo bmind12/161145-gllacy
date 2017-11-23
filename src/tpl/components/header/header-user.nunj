@@ -1,7 +1,74 @@
+{% import "helpers/button.nunj" as btn %}
+
 <ul class="user-panel">
-    {% for name, link, modifier in user %}
-        <li class="user-panel__item">
-            <a class="user-panel__link {{modifier}}" href="{{link}}">{{name}}</a>
+    <li class="user-panel__item">
+        <a class="user-panel__link user-panel__link--login" href="#0">
+            Вход
+        </a>
+        <form method="get" action="#0" class="user-panel__form">
+            <div class="input">
+                <input class="user-panel__input input__field" type="email" placeholder="Электронная почта" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Электронная почта'">
+                <span class="input__placeholder">Электронная почта</span>
+            </div>
+            <div class="input">
+                <input class="user-panel__input input__field" type="password" placeholder="Пароль" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Пароль'">
+                <span class="input__placeholder">Пароль</span>
+            </div>
+            <div class="user-panel__controls">
+                {{btn.template(class='user-panel__button', type='submit', link='#0', text='Войти')}}
+                <div class="user-panel__links">
+                    <a class="user-panel__login-link" href="#0">
+                        Забыли пароль?
+                    </a>
+                    <a class="user-panel__login-link" href="#0">
+                        Новая регистрация
+                    </a>
+                </div>
+            </div>
+        </form>
+    </li>
+    {% if products %}
+        {% for title, total, items in products %}
+        <li class="user-panel__item cart">
+            <a class="user-panel__link cart__link user-panel__link--full-cart" href="#0">
+                {{title}}
+            </a>
+            <div class="cart__modal">
+                <table class="cart__table">
+                    <tbody>
+                        {% for name, img, link, weight, price, sum in items %}
+                            <tr class="cart__row">
+                                <td>
+                                    <button class="cart__close" aria-lable="Убрать {{title}}"></button>
+                                </td>
+                                <td class="cart__icon">
+                                    <img class="cart__img" src="{{img}}" alt="{{name}}">
+                                </td>
+                                <td class="cart__name">
+                                    {{name}}
+                                </td>
+                                <td class="cart__calc">
+                                    {{weight}} кг х {{price}} руб.
+                                </td>
+                                <td class="cart__sum">
+                                    {{sum}} руб.
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="cart__total">
+                    Итого: {{total}} руб.
+                </div>
+                {{btn.template(class='cart__button', type='link', link='#0', text='Оформить заказ')}}
+            </div>
         </li>
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <li class="user-panel__item">
+            <a class="user-panel__link user-panel__link--cart" href="#0">
+                Пусто
+            </a>
+        </li>
+    {% endif %}
 </ul>

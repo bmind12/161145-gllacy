@@ -4,7 +4,61 @@
     margin-bottom: 4px;
     list-style-type: none;
 
+    &__form {
+        position: absolute;
+        top: 120%;
+        right: 0;
+        z-index: 100;
+        width: 277px;
+        padding: 20px 15px;
+        background-color: #f8f7f4;
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+        transition: visibility 0s, opacity 0.1s ease-out;
+
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:before {
+            position: absolute;
+            top: -10px;
+            display: block;
+            width: 100%;
+            height: 10px;
+            content: '';
+        }
+    }
+
+    &__controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__login-link {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 24px;
+        color: $secondary-font;
+        text-decoration: underline;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+    }
+
     &__item {
+        position: relative;
         display: inline-block;
     }
 
@@ -17,7 +71,15 @@
         color: $primary-font;
         text-decoration: none;
         background-color: rgba(255, 255, 255, .2);
+        background-image: url("../gfx/icons/svg/entrance.svg");
         border-radius: 20px;
+        transition: all 0.2s ease-out;
+
+        &:hover,
+        &:focus {
+            color: $secondary-font;
+            background-color: #fff;
+        }
 
         &--login {
             padding-right: 18px;
@@ -26,6 +88,16 @@
             background-image: url("../gfx/icons/svg/entrance.svg");
             background-position: 18px 10px;
             background-repeat: no-repeat;
+
+            &:hover,
+            &:focus {
+                background-image: url("../gfx/icons/svg/entrance-black.svg");
+
+                & + .user-panel__form {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
         }
 
         &--cart {
@@ -35,6 +107,30 @@
             background-image: url("../gfx/icons/svg/basket.svg");
             background-position: 18px 10px;
             background-repeat: no-repeat;
+
+            &:hover,
+            &:focus {
+                background-image: url("../gfx/icons/svg/basket-black.svg");
+            }
+        }
+
+        &--full-cart {
+            padding-right: 15px;
+            padding-left: 47px;
+            margin-left: 5px;
+            color: $secondary-font;
+            background-color: #fff;
+            background-image: url("../gfx/icons/svg/basket-red.svg");
+            background-position: 18px 8px;
+            background-repeat: no-repeat;
+
+            &:hover,
+            &:focus {
+                & + .user-panel__cart {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
         }
     }
 }

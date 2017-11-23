@@ -1,20 +1,27 @@
 {% set pages = [
-    ['1', '#0'],
+    ['arrow-left', '#0', false],
+    ['1', '#0', true],
     ['2', '#0'],
     ['3', '#0'],
     ['4', '#0'],
     ['5', '#0'],
-    ['arrow-right', '#0']
+    ['arrow-right', '#0', true]
 ] %}
 
-<ul>
-    {% for page, link in pages %}
+<ul class="pagination">
+    {% for page, link, active in pages %}
         {% if page === 'arrow-left' %}
-            <li class="arrow-left"></li>
+            <li class="pagination__arrow pagination__arrow--left {{'pagination__arrow--active' if active}}">
+                <a class="pagination__link pagination__link--arrow" href="{{link}}"></a>
+            </li>
         {% elif page === 'arrow-right' %}
-            <li class="arrow-right"></li>
+            <li class="pagination__arrow pagination__arrow--right {{'pagination__arrow--active' if active}}">
+                <a class="pagination__link pagination__link--arrow" href="{{link}}"></a>
+            </li>
         {% else %}
-            <li><a href="{{link}}">{{page}}</a></li>
+            <li class="pagination__page">
+                <a class="pagination__link {{'pagination__link--active' if active}}" href="{{link}}">{{page}}</a>
+            </li>
         {% endif %}
     {% endfor %}
 </ul>

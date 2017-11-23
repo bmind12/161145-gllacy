@@ -19,6 +19,12 @@ const
     GFX_BASE = `${DEV_BASE}/gfx`,
     GFX_FILES_ALL = `${GFX_BASE}/**/*`,
     GFX_DEST = `${BUILD_BASE}/gfx`
+
+    /* JS */
+    JS_BASE = `${DEV_BASE}/app`;
+    JS_MAIN_FILE = `${JS_BASE}/app.js`;
+    JS_FILES_ALL = `${JS_BASE}/**/*.js`;
+    JS_DEST = `${BUILD_BASE}/app`;
 ;
 
 module.exports = {
@@ -34,5 +40,9 @@ module.exports = {
     STYLES_DEST,
     GFX_BASE,
     GFX_FILES_ALL,
-    GFX_DEST
+    GFX_DEST,
+    JS_BASE,
+    JS_MAIN_FILE,
+    JS_FILES_ALL,
+    JS_DEST
 };

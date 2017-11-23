@@ -40,7 +40,17 @@
 
     &__nav-link {
         color: $primary-font;
-        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+        &:hover {
+            color: #ffbc9e;
+            border-color: #ffbc9e;
+        }
+
+        &:active {
+            color: #ffbc9e;
+            border-color: #ffbc9e;
+        }
     }
 
     &__partner-block {
@@ -49,9 +59,9 @@
     }
 
     &__partner-link {
-        text-align: left;
         display: inline-block;
         width: 190px;
+        text-align: left;
     }
 
     &__partner-text {

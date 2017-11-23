@@ -1,0 +1,54 @@
+<form class="products-filter" action="#0" method="get">
+    <div class="products-filter__elem">
+        <div class="products-filter__name" for="sorting">Сортировка:</div>
+        <div class="products-filter__wrapper products-filter__wrapper--white">
+            <select class="products-filter__select" id="sorting" type="text">
+                <option class="products-filter__option" value="popularity">по популярности</option>
+                <option class="products-filter__option" value="price">по цене</option>
+                <option class="products-filter__option" value="fat">по жирности</option>
+            </select>
+            <button class="products-filter__sort"></span>
+        </div>
+    </div>
+    <div class="products-filter__elem">
+        <div class="products-filter__name" for="price">Цена: 100 руб. – 500 руб.</div>
+        <div class="products-filter__wrapper range">
+            <div class="range__controls">
+                <div class="range__scale">
+                    <div class="range__bar"></div>
+                </div>
+                <div class="range__toggle range__toggle--min"></div>
+                <div class="range__toggle range__toggle--max"></div>
+            </div>
+        </div>
+    </div>
+    <div class="products-filter__elem">
+        <div class="products-filter__name">Жирность:</div>
+        <div class="products-filter__wrapper">
+            <input type="radio" name="fat" id="product-fat-0" value="eou">
+            <label for="product-fat-0">0%</label>
+            <input type="radio" name="fat" id="product-fat-10" value="eou">
+            <label for="product-fat-10">до 10%</label>
+            <input type="radio" name="fat" id="product-fat-30" value="eou">
+            <label for="product-fat-30">до 30%</label>
+            <input type="radio" name="fat" id="product-fat-30+" value="eou">
+            <label for="product-fat-30+">выше 30%</label>
+        </div>
+    </div>
+    <div class="products-filter__elem">
+        <div class="products-filter__name">Наполнители:</div>
+        <div class="products-filter__wrapper">
+            <input id="product-fill-chocolate" type="checkbox">
+            <label for="product-fill-chocolate">шоколадные</label>
+            <input id="product-fill-sugar" type="checkbox">
+            <label for="product-fill-sugar">сахарные посыпки</label>
+            <input id="product-fill-fruits" type="checkbox">
+            <label for="product-fill-fruits">фрукты</label>
+            <input id="product-fill-sirup" type="checkbox">
+            <label for="product-fill-sirup">сиропы</label>
+            <input id="product-fill-jam" type="checkbox">
+            <label for="product-fill-jam">джемы</label>
+        </div>
+    </div>
+    <button class="products-filter__submit">Применить</button>
+</form>

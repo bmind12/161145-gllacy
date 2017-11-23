@@ -1,6 +1,15 @@
-<section>
+{% import "helpers/button.nunj" as btn %}
+
+<section class="subscription">
     <h2 class="visually-hidden">Подпишись</h2>
-    <p>
+    <p class="subscription__text">
         Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
     </p>
+    <form class="subscription__form" action="#0" method="post">
+        <div class="input subscription__email">
+            <input class="input__field" type="text" placeholder="Электронная почта" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Электронная почта'">
+            <span class="input__placeholder">Электронная почта</span>
+        </div>
+        {{btn.template(class='subscription__button', text='Отправить')}}
+    </form>
 </section>

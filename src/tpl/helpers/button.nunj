@@ -12,7 +12,7 @@ Button with icon
 
 {% macro template(type, class, text, link, disabled, aria, left, data) %}
     <{% if link %}a {% else %}button type="button"{% endif %}
-    class="btn {% if type %}btn-{{type}}{% endif %} {{class}}"
+    class="btn {% if type %}btn--{{type}}{% endif %} {{class}}"
     {% if link %}href="{{link}}"{% endif %}
     {% if disabled %}disabled{% endif %}
     {% if aria %}{% for attr in aria %}aria-{{attr|safe}}{% endfor %}{% endif %}

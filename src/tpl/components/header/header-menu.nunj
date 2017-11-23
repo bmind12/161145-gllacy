@@ -1,7 +1,18 @@
 <ul class="main-nav">
-    {% for name, link in navigation %}
+    {% for name, link, submenu, active in navigation %}
         <li class="main-nav__item">
-            <a class="main-nav__link" href="{{link}}">{{name}}</a>
+            <a class="main-nav__link {{'main-nav__link--active' if active}}" href="{{link}}">
+                {{name}}
+            </a>
+            <ul class="main-nav__submenu">
+                {% for item, link, modifier, active in submenu %}
+                    <li class="main-nav__subitem {{modifier}}">
+                        <a class="main-nav__sublink {{'main-nav__sublink--active' if active}}" href="{{link}}">
+                            {{item}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </li>
     {% endfor %}
 </ul>

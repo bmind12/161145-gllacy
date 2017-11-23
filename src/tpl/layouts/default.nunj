@@ -17,11 +17,10 @@
     {% include '../components/header/header.nunj'%}
 
     <main>
-        <div class="container">
-            {% block content %}{% endblock %}
-        </div>
+        {% block content %}{% endblock %}
     </main>
 
     {% include '../components/footer/footer.nunj'%}
+    <script src="app/app.js"></script>
 </body>
 </html>

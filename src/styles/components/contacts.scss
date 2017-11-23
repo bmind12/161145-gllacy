@@ -1,0 +1,58 @@
+.contacts {
+    min-height: 430px;
+    margin: 0;
+
+    &__map {
+        position: absolute;
+        width: 100%;
+
+        &--fallback {
+            left: 50%;
+            z-index: -1;
+            display: none;
+            width: auto;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__address {
+        position: absolute;
+        top: 60px;
+        right: 25px;
+        width: 305px;
+        min-height: 308px;
+        padding: 30px 27px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $secondary-font;
+        background-color: #fff;
+        border-radius: 15px;
+    }
+
+    &__street {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    &__phone {
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    &__button {
+        display: block;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #fefefe;
+        text-align: center;
+    }
+}

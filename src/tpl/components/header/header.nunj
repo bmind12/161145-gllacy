@@ -1,14 +1,3 @@
-{% set navigation = [
-    ['Каталог', '#0'],
-    ['Доставка и оплата', '#0'],
-    ['О Компании', '#0']
-] %}
-
-{% set user = [
-    ['Вход', '#0', 'user-panel__link--login'],
-    ['Пусто', '#0', 'user-panel__link--cart']
-] %}
-
 <header class="header container">
     {% include './header-navigation.nunj' %}
     {% include './header-connection.nunj' %}

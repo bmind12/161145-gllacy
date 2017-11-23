@@ -1,0 +1,28 @@
+{% import "helpers/button.nunj" as btn %}
+
+{% set slider = [
+    ['Крем-брюле и пломбир с малиновым джемом', './gfx/images/bestseller-1.png', 'Давайте оба!', '#0', 'green', 'data-slider=slider-1', true],
+    ['Шоколадный пломбир и лимонный сорбет', './gfx/images/bestseller-2.png', 'Давайте оба!', '#0', 'blue', 'data-slider=slider-2', false],
+    ['Пломбир с помадкой и клубничный щербет', './gfx/images/bestseller-3.png', 'Давайте оба!', '#0', 'red', 'data-slider=slider-3', false]
+] %}
+
+<section class="slider">
+    <div class="slider__toggler">
+        <input class="slider__radio" id="slider-1" type="radio" name="slider-toggler" checked>
+        <label class="slider__label" for="slider-1"></label>
+        <input class="slider__radio" id="slider-2" type="radio" name="slider-toggler">
+        <label class="slider__label" for="slider-2"></label>
+        <input class="slider__radio" id="slider-3" type="radio" name="slider-toggler">
+        <label class="slider__label" for="slider-3"></label>
+    </div>
+    <h2 class="visually-hidden">Популярные товары</h2>
+    <ul class="slider__list">
+        {% for name, img, button, link, bg, data, active in slider %}
+            <li class="slider__item {{ 'is-active' if active }}" {{data}}>
+                <img class="slider__img slider__img--{{bg}}" src="{{img}}" alt="{{name}}">
+                <h3 class="slider__title">{{name}}</h3>
+                {{btn.template(class='slider__button', link=link, text=button, type='lg')}}
+            </li>
+        {% endfor %}
+    </ul>
+</section>

@@ -13,4 +13,5 @@
     ['Сливочное с мятным сиропом', '420₽', 'кг', '#0', './gfx/images/item-12.png']
 ] %}
 
+{% include './products-filter.nunj' %}
 {% include './products.nunj' %}

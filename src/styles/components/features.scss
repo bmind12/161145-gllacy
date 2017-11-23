@@ -1,5 +1,6 @@
 .features {
     padding: 25px;
+    margin-bottom: 40px;
     color: $secondary-font;
     background-image: url("../gfx/images/bg-features.jpg");
     border-radius: 15px;
@@ -20,8 +21,8 @@
 
     &__item {
         width: 49%;
-        padding-left: 55px;
         padding-top: 15px;
+        padding-left: 55px;
         margin-bottom: 15px;
         background-position: top left;
         background-repeat: no-repeat;

@@ -9,4 +9,44 @@
     background-repeat: no-repeat;
     border-radius: 50%;
     content: "";
+    transition: all 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+        background-color: #f7f6f3;
+        background-image: url("../gfx/icons/svg/loupe-black.svg");
+
+        & + .main-search__form {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__form {
+        position: absolute;
+        right: 0;
+        z-index: 100;
+        width: 344px;
+        padding: 20px 15px;
+        background-color: #f8f7f4;
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+        transition: visibility 0s, opacity 0.1s ease-out;
+
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:before {
+            position: absolute;
+            top: -10px;
+            display: block;
+            width: 100%;
+            height: 10px;
+            content: '';
+        }
+    }
 }

@@ -1,8 +1,8 @@
 {% set products = [
-    ['Сливочное с апельсиновым джемом и цитрусовой стружкой', '310₽', 'кг', '#0', './gfx/images/item-1.png', 'products__item--hit'],
-    ['Сливочно-кофейное с кусочками шоколада', '380₽', 'кг', '#0', './gfx/images/item-2.png', 'products__item--hit'],
-    ['Сливочно-клубничное с присыпкой из белого шоколада', '355₽', 'кг', '#0', './gfx/images/item-3.png', 'products__item--hit'],
-    ['Сливочное крем-брюле с карамельной подливкой', '415₽', 'кг', '#0', './gfx/images/item-4.png', 'products__item--hit']
+    ['Сливочное с апельсиновым джемом и цитрусовой стружкой', '310₽', 'кг', '#0', './gfx/images/item-1.png', 'products__item--hit products__item--higher'],
+    ['Сливочно-кофейное с кусочками шоколада', '380₽', 'кг', '#0', './gfx/images/item-2.png', 'products__item--hit products__item--higher'],
+    ['Сливочно-клубничное с присыпкой из белого шоколада', '355₽', 'кг', '#0', './gfx/images/item-3.png', 'products__item--hit products__item--higher'],
+    ['Сливочное крем-брюле с карамельной подливкой', '415₽', 'кг', '#0', './gfx/images/item-4.png', 'products__item--hit products__item--higher']
 ] %}
 
 {% include './products.nunj' %}

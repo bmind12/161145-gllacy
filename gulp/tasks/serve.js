@@ -4,7 +4,7 @@ const browserSync = require('browser-sync');
 const gwatch = require('gulp-watch');
 const runSequence = require('run-sequence');
 
-const { BUILD_BASE, STYLES_FILES_ALL, TPL_FILES_ALL } = config;
+const { BUILD_BASE, STYLES_FILES_ALL, TPL_FILES_ALL, JS_FILES_ALL } = config;
 
 gulp.task('serve', ['prepare'], () => {
     browserSync.init({
@@ -17,4 +17,5 @@ gulp.task('serve', ['prepare'], () => {
 
     watch(STYLES_FILES_ALL, ['sass']);
     watch(TPL_FILES_ALL, ['tpl']);
+    watch(JS_FILES_ALL, ['js']);
 });

@@ -1,6 +1,10 @@
-<article>
-    <p>Новое в нашем блоге</p>
-    <h3>
-        10 способов сервировки фруктовых щербетов к столу
-    </h3>
+<article class="article">
+    <p class="article__desc">Новое в нашем блоге</p>
+    <a href="#0">
+        <h3 class="article__title">
+            <span class="highlight-text highlight-text--white">
+                10 способов сервировки фруктовых щербетов к столу
+            <span>
+        </h3>
+    </a>
 </article>

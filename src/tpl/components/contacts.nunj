@@ -1,12 +1,17 @@
-<section>
-    <h2>Контакты</h2>
-    <img src="./gfx/images/map.jpg" alt="Карта" width="1200" height="640">
-    <div>
-        <span>Адрес главного офиса и офлайн магазина:</span><br>
-        <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span><br>
-        <span>Для заказов по телефону:</span><br>
-        <span>8 812 450-25-25</span><br>
-        <span>(с 10 до 20 ежедневно)</span>
-        <a href="#0">Форма обратной связи</a>
+{% import "helpers/button.nunj" as btn %}
+
+<section class="contacts">
+    <h2 class="visually-hidden">Контакты</h2>
+    <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6077115238406!2d30.320442216313786!3d59.938651369059386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca77c663%3A0xe2913435672b14c9!2s21Shop!5e0!3m2!1sen!2scz!4v1510431174636" width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <img class="contacts__map contacts__map--fallback" src="./gfx/images/map.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
+    <div class="container">
+        <div class="contacts__address">
+            <span>Адрес главного офиса и офлайн магазина:</span><br>
+            <span class="contacts__street">ул. Большая Конюшенная 19/8, Санкт-Петербург</span><br>
+            <span>Для заказов по телефону:</span><br>
+            <span class="contacts__phone">8 812 450-25-25</span><br>
+            <span>(с 10 до 20 ежедневно)</span>
+            {{btn.template(class='contacts__button', link='#0', text='Форма обратной связи')}}
+        </div>
     </div>
 </section>

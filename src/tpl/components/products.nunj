@@ -1,13 +1,16 @@
+{% import "helpers/button.nunj" as btn %}
+
 <section class="products">
     <h2 class="visually-hidden">Мороженое</h2>
     <ul class="products__list">
         {% for name, price, volume, link, img, modifier in products %}
             <li class="products__item {{modifier}}">
-                <a href="{{link}}">
+                <a class="products__link" href="{{link}}">
                     <img class="products__img" src="{{img}}" alt="{{name}}">
+                    <span class="products__price">{{price}}<small class="products__volume">/{{volume}}</small></span>
+                    <h3 class="products__title">{{name}}</h3>
+                    {{btn.template(class='products__button', link='{{link}}', text='Быстрый просмотр')}}
                 </a>
-                <span class="products__price">{{price}}<small class="products__volume">/{{volume}}</small></span>
-                <h3 class="products__title">{{name}}</h3>
             </li>
         {% endfor %}
     </ul>
